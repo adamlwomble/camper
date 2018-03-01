@@ -1,0 +1,41 @@
+// ===== molecules > authors =====
+
+// ...
+
+.authors {
+  @extend %molecule;
+
+  .about & {
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: about,
+        size: large,
+        constraint: min
+      )
+    ){
+      @include molecule(
+        $name: authors,
+        $parent: about,
+        $size: large
+      );
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: about,
+        size: x-large,
+        constraint: min
+      )
+    ){
+      @include molecule(
+        $name: authors,
+        $parent: about,
+        $size: x-large
+      );
+    }
+  }
+}

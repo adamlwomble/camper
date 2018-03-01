@@ -1,0 +1,41 @@
+// ===== molecules > dates =====
+
+// ...
+
+.dates {
+  @extend %molecule;
+
+  .events & {
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: events,
+        size: large,
+        constraint: min
+      )
+    ) {
+      @include molecule(
+        $name: dates,
+        $parent: events,
+        $size: large
+      );
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: events,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include molecule(
+        $name: dates,
+        $parent: events,
+        $size: x-large
+      );
+    }
+  }
+}

@@ -1,0 +1,3 @@
+@mixin font-family($font) {
+  font-family: font-family-get($font), unquote($font);
+}

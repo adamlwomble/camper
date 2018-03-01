@@ -1,0 +1,22 @@
+// ===== protons > input =====
+
+// ...
+
+.input {
+  @extend %font_base;
+  margin: 0;
+  width: 100%;
+  padding: font-size-quotient(16) font-size-quotient(24);
+
+  &::placeholder {
+    @extend %pigment-mid;
+  }
+
+  @include lead(
+    $dividend: 6
+  );
+
+  &[type='radio'] {
+    @extend %hidden;
+  }
+}

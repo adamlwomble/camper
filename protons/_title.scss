@@ -1,0 +1,121 @@
+// ===== protons > title =====
+
+// ...
+
+.title {
+
+  .biography & {
+    @extend %crosshead-medium;
+  }
+
+  .relatives & {
+    @extend %crosshead-heavy;
+  }
+
+  .books .book &,
+  .dates .date &,
+  .docs  .doc  &,
+  .posts .post & {
+    @extend %crosshead-main;
+  }
+
+  .authors > &,
+  .books > &,
+  .dates > &,
+  .docs > &,
+  .posts > & {
+    @extend %title-section;
+  }
+
+  .introduction > & {
+    @extend %title-page;
+  }
+
+  // ===== medium, below =====
+  @include membrane(
+    $max: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    .relative .post & {
+      @include lead(
+        $dividend: 3.5
+      );
+    }
+
+    .book &,
+    .dates .date &,
+    .docs .doc &,
+    .posts .post & {
+      @include lead(
+        $dividend: 5,
+        $divisor: small
+      );
+    }
+
+    .biography &,
+    .introduction .author & {
+      @include lead(
+        $dividend: 10
+      );
+    }
+
+    .post .introduction > &,
+    .doc  .introduction > & {
+      @include lead(
+        $dividend: 22,
+        $divisor: large
+      );
+    }
+  }
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    .relative .post & {
+      @include lead(
+        $dividend: 5,
+        $divisor: small
+      );
+    }
+
+    .introduction .author & {
+      @include lead(
+        $dividend: 7
+      );
+    }
+
+    .biography & {
+      @include lead(
+        $dividend: 8
+      );
+    }
+
+    .book &,
+    .dates .date &,
+    .docs .doc &,
+    .posts .post & {
+      @include lead(
+        $dividend: 14,
+        $divisor: medium
+      );
+    }
+
+    .post .introduction > &,
+    .doc  .introduction > & {
+      @include lead(
+        $dividend: 20,
+        $divisor: x-large
+      );
+    }
+  }
+}

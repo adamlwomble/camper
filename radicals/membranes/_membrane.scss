@@ -1,0 +1,63 @@
+// ===== radicals > membranes > membrane =====
+
+// ...
+
+@mixin membrane ($min: null, $max: null) {
+
+  @if $min {
+    $min-size: map-get($min, size);
+
+    $min: particle-get(
+      $type: map-get($min, type),
+      $name: map-get($min, name),
+      $size: $min-size,
+      $number: map-get($min, number),
+      $constraint: map-get($min, constraint)
+    );
+
+    @if $min-size != small {
+      $min: $min + map-get-deep(
+        $cells, cell-base, gutters, left
+      ) + map-get-deep(
+        $cells, cell-base, gutters, right
+      );
+    }
+  }
+
+  @if $max {
+    $max-size: map-get($max, size);
+
+    $max: particle-get(
+      $type: map-get($max, type),
+      $name: map-get($max, name),
+      $size: $max-size,
+      $number: map-get($max, number),
+      $constraint: map-get($max, constraint)
+    );
+
+    @if $max-size != small {
+      $max: $max + map-get-deep(
+        $cells, cell-base, gutters, left
+      ) + map-get-deep(
+        $cells, cell-base, gutters, right
+      );
+    }
+  }
+
+  @if $min and $max {
+    @media screen and (min-width: to-unit($min, px)) and (max-width: to-unit($max, px)) {
+      @content;
+    }
+  } @else if $max {
+    @media screen and (max-width: to-unit($max, px)) {
+      @content;
+    }
+  } @else if $min {
+    @media screen and (min-width: to-unit($min, px)) {
+      @content;
+    }
+  } @else {
+    @warn 'Sorry, but you must specify a particle for either the $min or $max parameter for the membrane mixin.';
+  }
+
+}

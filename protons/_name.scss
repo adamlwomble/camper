@@ -1,0 +1,10 @@
+// ===== protons > name =====
+
+// ...
+
+.name {
+
+  .author & {
+    @extend %crosshead-main;
+  }
+}

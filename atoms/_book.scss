@@ -1,0 +1,36 @@
+// ===== atoms > book =====
+
+// ...
+
+.book {
+
+  .books & {
+    // ===== medium, below =====
+    @include membrane(
+      $max: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      @include lead(
+        $dividend: 56
+      );
+    }
+
+    // ===== medium, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      @include lead(
+        $dividend: 50
+      );
+    }
+  }
+}

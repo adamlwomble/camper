@@ -1,0 +1,41 @@
+// ===== molecules > posts =====
+
+// ...
+
+.posts {
+  @extend %molecule;
+
+  .blog & {
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: blog,
+        size: large,
+        constraint: min
+      )
+    ) {
+      @include molecule(
+        $name: posts,
+        $parent: blog,
+        $size: large
+      );
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: blog,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include molecule(
+        $name: posts,
+        $parent: blog,
+        $size: x-large
+      );
+    }
+  }
+}

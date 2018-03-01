@@ -1,0 +1,14 @@
+// ===== radicals > membranes > cell =====
+
+// ...
+
+@mixin cell($name, $size) {
+  max-width: to-unit(
+    particle-get(
+      cell,
+      $name,
+      $size,
+      $constraint: max
+    ), px
+  );
+}

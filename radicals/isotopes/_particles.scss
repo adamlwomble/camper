@@ -1,0 +1,1117 @@
+// ===== radicals > isotopes > particles =====
+
+// ...
+
+%article {
+  & > p:first-child,
+  p + p,
+  p + ol + p,
+  p + ul + p,
+  p + img + p,
+  p + table + p,
+  p + figure + p {
+    text-indent: font-size-quotient(24);
+  }
+
+  h6 {
+    @extend %crosshead-light;
+  }
+
+  h5 {
+    @extend %crosshead-medium;
+  }
+
+  h4 {
+    @extend %crosshead-heavy;
+  }
+
+  h3 {
+    @extend %crosshead-main;
+  }
+
+  h2 {
+    @extend %title-section;
+  }
+
+  h1 {
+    @extend %title-page;
+  }
+
+  table + table {
+    @include lead(
+      $dividend: 6
+    );
+  }
+
+  p + table,
+  ol + table,
+  ul + table,
+  table:first-child,
+  table + p,
+  table + ol,
+  table + ul {
+    @include lead(
+      $dividend: 7
+    );
+  }
+
+  p + ol,
+  p + ul,
+  & > ol:first-child,
+  ol + p,
+  ol + ol,
+  ol + ul,
+  & > ul:first-child,
+  ul + p,
+  ul + ol,
+  ul + ul {
+    @include lead(
+      $dividend: 8
+    );
+  }
+
+  h1 + table {
+    @include lead(
+      $dividend: 17
+    );
+  }
+
+  h1 + p,
+  h1 + ol,
+  h1 + ul {
+    @include lead(
+      $dividend: 18
+    );
+  }
+
+  h2 + table,
+  h4 + table,
+  h5 + table,
+  h6 + table,
+  img + table,
+  table + img,
+  table + figure,
+  figure + table {
+    @include lead(
+      $dividend: 23
+    );
+  }
+
+  h2 + p,
+  h2 + ol,
+  h2 + ul,
+  h4 + p,
+  h4 + ol,
+  h4 + ul,
+  h5 + p,
+  h5 + ol,
+  h5 + ul,
+  h6 + p,
+  h6 + ol,
+  h6 + ul,
+  img:first-child,
+  img + p,
+  img + ol,
+  img + ul,
+  p  + img,
+  p + figure,
+  ol + img,
+  ol + figure,
+  ul + img,
+  ul + figure,
+  img + img,
+  figure:first-child,
+  figure + p,
+  figure + ol,
+  figure + ul,
+  figure + figure {
+    @include lead(
+      $dividend: 24
+    );
+  }
+
+  h3 + table {
+    @include lead(
+      $dividend: 25
+    );
+  }
+
+  h3 + p,
+  h3 + ol,
+  h3 + ul {
+    @include lead(
+      $dividend: 26
+    );
+  }
+
+  h1 + h6,
+  h1 + img,
+  h1 + figure {
+    @include lead(
+      $dividend: 34
+    );
+  }
+
+  table + h6 {
+    @include lead(
+      $dividend: 39
+    );
+  }
+
+  h2 + h6,
+  h2 + img,
+  h2 + figure,
+  h4 + h6,
+  h4 + img,
+  h4 + figure,
+  h5 + h6,
+  h5 + img,
+  h5 + figure,
+  h6:first-child,
+  h6 + h6,
+  h6 + img,
+  h6 + figure,
+  p  + h6,
+  ol + h6,
+  ul + h6,
+  img + h6,
+  img + figure {
+    @include lead(
+      $dividend: 40
+    );
+  }
+
+  h3 + h6,
+  h3 + img,
+  h3 + figure {
+    @include lead(
+      $dividend: 42
+    );
+  }
+
+  h1 + h5 {
+    @include lead(
+      $dividend: 50
+    );
+  }
+
+  table + h5 {
+    @include lead(
+      $dividend: 55
+    );
+  }
+
+  h2 + h5,
+  h4 + h5,
+  h5:first-child,
+  h5 + h5,
+  h6 + h5,
+  p  + h5,
+  ol + h5,
+  ul + h5,
+  img + h5,
+  figure + h6,
+  figure + img {
+    @include lead(
+      $dividend: 56
+    );
+  }
+
+  h3 + h5 {
+    @include lead(
+      $dividend: 58
+    );
+  }
+
+  h1 + h4 {
+    @include lead(
+      $dividend: 66
+    );
+  }
+
+  table + h4 {
+    @include lead(
+      $dividend: 71
+    );
+  }
+
+  h2 + h4,
+  h4:first-child,
+  h4 + h4,
+  h5 + h4,
+  h6 + h4,
+  p  + h4,
+  ol + h4,
+  ul + h4,
+  img + h4,
+  figure + h5 {
+    @include lead(
+      $dividend: 72
+    );
+  }
+
+  h3 + h4 {
+    @include lead(
+      $dividend: 74
+    );
+  }
+
+  h1 + h3 {
+    @include lead(
+      $dividend: 80,
+      $divisor: small
+    );
+  }
+
+  h1 + h1 {
+    @include lead(
+      $dividend: 80,
+      $divisor: large
+    );
+  }
+
+  table + h3 {
+    @include lead(
+      $dividend: 85,
+      $divisor: small
+    );
+  }
+
+  table + h1 {
+    @include lead(
+      $dividend: 85,
+      $divisor: large
+    );
+  }
+
+  h2 + h3,
+  h3:first-child,
+  h4 + h3,
+  h5 + h3,
+  h6 + h3,
+  p  + h3,
+  ol + h3,
+  ul + h3,
+  img + h3 {
+    @include lead(
+      $dividend: 86,
+      $divisor: small
+    );
+  }
+
+  h1:first-child,
+  h2 + h1,
+  h4 + h1,
+  h5 + h1,
+  h6 + h1,
+  p  + h1,
+  ol + h1,
+  ul + h1,
+  img + h1 {
+    @include lead(
+      $dividend: 86,
+      $divisor: large
+    );
+  }
+
+  figure + h4 {
+    @include lead(
+      $dividend: 88
+    );
+  }
+
+  h3 + h3 {
+    @include lead(
+      $dividend: 88,
+      $divisor: small
+    );
+  }
+
+  h3 + h1 {
+    @include lead(
+      $dividend: 88,
+      $divisor: large
+    );
+  }
+
+  h1 + h2 {
+    @include lead(
+      $dividend: 90,
+      $divisor: medium
+    );
+  }
+
+  table + h2 {
+    @include lead(
+      $dividend: 95,
+      $divisor: medium
+    );
+  }
+
+  h2:first-child,
+  h2 + h2,
+  h4 + h2,
+  h5 + h2,
+  h6 + h2,
+  p  + h2,
+  ol + h2,
+  ul + h2,
+  img + h2 {
+    @include lead(
+      $dividend: 96,
+      $divisor: medium
+    );
+  }
+
+  h3 + h2 {
+    @include lead(
+      $dividend: 98,
+      $divisor: medium
+    );
+  }
+
+  figure + h3 {
+    @include lead(
+      $dividend: 102,
+      $divisor: small
+    );
+  }
+
+  figure + h1 {
+    @include lead(
+      $dividend: 102,
+      $divisor: large
+    );
+  }
+
+  figure + h2 {
+    @include lead(
+      $dividend: 112,
+      $divisor: medium
+    );
+  }
+
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    h1 + table {
+      @include lead(
+        $dividend: 19
+      );
+    }
+
+    h1 + p,
+    h1 + ol,
+    h1 + ul {
+      @include lead(
+        $dividend: 20
+      );
+    }
+
+    p + table,
+    ol + table,
+    ul + table,
+    table:first-child,
+    table + p,
+    table + ol,
+    table + ul {
+      @include lead(
+        $dividend: 23
+      );
+    }
+
+    p + ol,
+    p + ul,
+    & > ol:first-child,
+    ol + p,
+    ol + ol,
+    ol + ul,
+    & > ul:first-child,
+    ul + p,
+    ul + ol,
+    ul + ul {
+      @include lead(
+        $dividend: 24
+      );
+    }
+
+    h1 + h1 {
+      @include lead(
+        $dividend: 32,
+        $divisor: x-large
+      );
+    }
+
+    h2 + table {
+      @include lead(
+        $dividend: 33
+      );
+    }
+
+    h2 + p,
+    h2 + ol,
+    h2 + ul {
+      @include lead(
+        $dividend: 34
+      );
+    }
+
+    h1 + h6,
+    h1 + img,
+    h1 + figure {
+      @include lead(
+        $dividend: 36
+      );
+    }
+
+    h4 + table {
+      @include lead(
+        $dividend: 37
+      );
+    }
+
+    h4 + p,
+    h4 + ol,
+    h4 + ul {
+      @include lead(
+        $dividend: 38
+      );
+    }
+
+    h3 + table,
+    h5 + table,
+    h6 + table,
+    table + img,
+    table + figure,
+    figure + table {
+      @include lead(
+        $dividend: 39
+      );
+    }
+
+    h3 + p,
+    h3 + ol,
+    h3 + ul,
+    h5 + p,
+    h5 + ol,
+    h5 + ul,
+    h6 + p,
+    h6 + ol,
+    h6 + ul,
+    p + img,
+    p + figure,
+    ol + img,
+    ol + figure,
+    ul + img,
+    ul + figure,
+    img:first-child,
+    img + img,
+    figure:first-child,
+    figure + p,
+    figure + ol,
+    figure + ul,
+    figure + figure {
+      @include lead(
+        $dividend: 40
+      );
+    }
+
+    h2 + h1 {
+      @include lead(
+        $dividend: 46,
+        $divisor: x-large
+      );
+    }
+
+    h2 + h6,
+    h2 + img {
+      @include lead(
+        $dividend: 50
+      );
+    }
+
+    h4 + h1 {
+      @include lead(
+        $dividend: 50,
+        $divisor: x-large
+      );
+    }
+
+    table + h1 {
+      @include lead(
+        $dividend: 51,
+        $divisor: x-large
+      );
+    }
+
+    h1 + h5 {
+      @include lead(
+        $dividend: 52
+      );
+    }
+
+    h1:first-child,
+    h3 + h1,
+    h5 + h1,
+    h6 + h1,
+    p  + h1,
+    ol + h1,
+    ul + h1,
+    img + h1 {
+      @include lead(
+        $dividend: 52,
+        $divisor: x-large
+      );
+    }
+
+    h4 + h6,
+    h4 + img,
+    h4 + figure {
+      @include lead(
+        $dividend: 54
+      );
+    }
+
+    table + h6 {
+      @include lead(
+        $dividend: 55
+      );
+    }
+
+    h3 + h6,
+    h3 + img,
+    h3 + figure,
+    h5 + h6,
+    h5 + img,
+    h5 + figure,
+    h6:first-child,
+    h6 + h6,
+    h6 + img,
+    h6 + figure,
+    p  + h6,
+    ol + h6,
+    ul + h6,
+    img + h6,
+    figure + img {
+      @include lead(
+        $dividend: 56
+      );
+    }
+
+    h1 + h4 {
+      @include lead(
+        $dividend: 62,
+        $divisor: small
+      );
+    }
+
+    h2 + h5,
+    h2 + figure {
+      @include lead(
+        $dividend: 66
+      )
+    }
+
+    h1 + h2 {
+      @include lead(
+        $dividend: 66,
+        $divisor: large
+      );
+    }
+
+    figure + h1 {
+      @include lead(
+        $dividend: 68,
+        $divisor: x-large
+      );
+    }
+
+    h4 + h5 {
+      @include lead(
+        $dividend: 70
+      );
+    }
+
+    table + h5 {
+      @include lead(
+        $dividend: 71
+      );
+    }
+
+    h3 + h5,
+    h5:first-child,
+    h5 + h5,
+    h6 + h5,
+    p  + h5,
+    ol + h5,
+    ul + h5,
+    img + h5,
+    figure + h6 {
+      @include lead(
+        $dividend: 72
+      );
+    }
+
+    h2 + h4 {
+      @include lead(
+        $dividend: 76,
+        $divisor: small
+      );
+    }
+
+    h1 + h3 {
+      @include lead(
+        $dividend: 76,
+        $divisor: medium
+      );
+    }
+
+    h4 + h4 {
+      @include lead(
+        $dividend: 80,
+        $divisor: small
+      );
+    }
+
+    h2 + h2 {
+      @include lead(
+        $dividend: 80,
+        $divisor: large
+      );
+    }
+
+    table + h4 {
+      @include lead(
+        $dividend: 81,
+        $divisor: small
+      );
+    }
+
+    h3 + h4,
+    h4:first-child,
+    h5 + h4,
+    h6 + h4,
+    p  + h4,
+    ol + h4,
+    ul + h4,
+    img + h4 {
+      @include lead(
+        $dividend: 82,
+        $divisor: small
+      );
+    }
+
+    h4 + h2 {
+      @include lead(
+        $dividend: 84,
+        $divisor: large
+      );
+    }
+
+    table + h2 {
+      @include lead(
+        $dividend: 85,
+        $divisor: large
+      );
+    }
+
+    h2:first-child,
+    h3 + h2,
+    h5 + h2,
+    h6 + h2,
+    p  + h2,
+    ol + h2,
+    ul + h2,
+    img + h2 {
+      @include lead(
+        $dividend: 86,
+        $divisor: large
+      );
+    }
+
+    figure + h5 {
+      @include lead(
+        $dividend: 88
+      );
+    }
+
+    figure + h4 {
+      @include lead(
+        $dividend: 88,
+        $divisor: small
+      );
+    }
+
+    h2 + h3 {
+      @include lead(
+        $dividend: 90,
+        $divisor: medium
+      );
+    }
+
+    h4 + h3 {
+      @include lead(
+        $dividend: 94,
+        $divisor: medium
+      );
+    }
+
+    table + h3 {
+      @include lead(
+        $dividend: 95,
+        $divisor: medium
+      );
+    }
+
+    h3:first-child,
+    h3 + h3,
+    h5 + h3,
+    h6 + h3,
+    p  + h3,
+    ol + h3,
+    ul + h3,
+    img + h3 {
+      @include lead(
+        $dividend: 96,
+        $divisor: medium
+      );
+    }
+
+    figure + h2 {
+      @include lead(
+        $dividend: 102,
+        $divisor: large
+      );
+    }
+
+    figure + h3 {
+      @include lead(
+        $dividend: 112,
+        $divisor: medium
+      )
+    }
+  }
+}
+
+%article-listing {
+  // ===== medium, below =====
+  @include membrane(
+    $max: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    &:nth-child(2) {
+      @include lead(
+        $dividend: 72
+      );
+    }
+    &:nth-child(n+3) {
+      @include lead(
+        $dividend: 56
+      );
+    }
+  }
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    &:nth-child(2) {
+      @include lead(
+        $dividend: 66
+      );
+    }
+    &:nth-child(n+3){
+      @include lead(
+        $dividend: 56
+      );
+    }
+  }
+
+  // ===== large, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: blog,
+      size: large,
+      constraint: min
+    )
+  ) {
+    @include atom(
+      $name: post,
+      $parent: posts,
+      $size: large
+    );
+  }
+
+  // ===== large, between, x-large =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: blog,
+      size: large,
+      constraint: min
+    ),
+    $max: (
+      type: cell,
+      name: blog,
+      size: x-large,
+      constraint: min
+    )
+  ) {
+    &:nth-child(-n+3) {
+      @include lead(
+        $dividend: 66
+      );
+    }
+    &:nth-child(even) {
+      float: left;
+      clear: left;
+    }
+    &:nth-child(odd) {
+      float: right;
+    }
+  }
+
+  // ===== x-large, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: blog,
+      size: x-large,
+      constraint: min
+    )
+  ) {
+    @include atom(
+      $name: post,
+      $parent: posts,
+      $size: x-large
+    );
+    float: left;
+    &:nth-child(-n+4) {
+      @include lead(
+        $dividend: 66
+      );
+    }
+    &:nth-child(3n+1) {
+      float: right;
+    }
+    &:nth-child(3n+2) {
+      @include gutter(
+        $size: semi-related,
+        $side: right,
+        $unit: pc,
+        $parent-type: molecule,
+        $parent-name: posts,
+        $parent-size: x-large
+      );
+      clear: left;
+    }
+  }
+}
+
+%border {
+  &-none {
+    border: none;
+  }
+  &-reset-spacing {
+    border-spacing: 0;
+  }
+}
+
+%box-shadow {
+  &-x-small {
+    box-shadow: 0 font-size-quotient(2) font-size-quotient(2) 0 pigment-get(mid);
+    &-negative {
+      box-shadow: 0 font-size-quotient(-2) font-size-quotient(2) 0 pigment-get(mid);
+    }
+  }
+  &-small {
+    box-shadow: 0 font-size-quotient(4) font-size-quotient(4) 0 pigment-get(mid);
+    &-negative {
+      box-shadow: 0 font-size-quotient(-4) font-size-quotient(4) 0 pigment-get(mid);
+    }
+  }
+  &-medium {
+    box-shadow: 0 font-size-quotient(8) font-size-quotient(8) 0 pigment-get(mid);
+    &-negative {
+      box-shadow: 0 font-size-quotient(-8) font-size-quotient(8) 0 pigment-get(mid);
+    }
+  }
+}
+
+%button {
+  @extend %link;
+  @extend %font_size-base;
+  @extend %display-block;
+  @extend %box-shadow-small;
+  background: pigment-get(light);
+  padding: font-size-quotient(8) 0;
+  text-align: center;
+  transition: 0.0625s ease-in-out;
+  &:hover {
+    @extend %box-shadow-x-small;
+  }
+}
+
+%cell {
+  @extend %clearfix;
+  @include cell(cell-base, small);
+
+  margin: 0 floor(
+    percentage(
+      particle-get(
+        $type: gutter,
+        $name: related
+      ) / particle-get(
+        $type: cell,
+        $name: cell-base,
+        $size: small
+      )
+    ) / 2
+  );
+
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    @include cell(
+      $name: cell-base,
+      $size: medium
+    );
+    @include gutter(
+      $size: related,
+      $side: left,
+      $unit: px
+    );
+    @include gutter(
+      $size: semi-related,
+      $side: right,
+      $unit: px
+    );
+  }
+}
+
+%clearfix {
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+%display {
+  &-block {
+    display: block;
+  }
+  &-inline {
+    display: inline;
+    &-block {
+      display: inline-block;
+    }
+  }
+}
+
+%hidden {
+  @extend %padding-zero;
+  @extend %border-none;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+%graphic {
+  &-responsive {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+%margin {
+  &-zero {
+    margin: 0;
+  }
+}
+
+%molecule {
+  @extend %clearfix;
+
+  // ===== medium, below =====
+  @include membrane(
+    $max: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    @include molecule(
+      $name: molecule-base,
+      $parent: cell-base,
+      $size: small
+    );
+    @include lead(
+      $dividend: 80
+    );
+  }
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    @include molecule(
+      $name: molecule-base,
+      $parent: cell-base,
+      $size: medium
+    );
+    @include lead(204);
+    float: right;
+  }
+}
+
+%padding {
+  &-zero {
+    padding: 0;
+  }
+}
+
+%position {
+  &-absolute {
+    position: absolute;
+  }
+  &-fixed {
+    position: fixed;
+  }
+}
+
+%reset {
+  &-spacing {
+    margin: 0;
+    padding: 0;
+  }
+}

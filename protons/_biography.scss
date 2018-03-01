@@ -1,0 +1,25 @@
+// ===== protons > biography =====
+
+// ...
+
+.biography {
+
+  .author & {
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: about,
+        size: large,
+        constraint: min
+      )
+    ) {
+      @include proton(
+        $name: biography,
+        $parent: author,
+        $size: large
+      );
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// ===== protons > time =====
+
+// ...
+
+.time {
+
+  .dates .date & {
+    @extend %crosshead-medium;
+    @extend %display-block;
+    @include lead(
+      $dividend: 8
+    );
+  }
+}

@@ -1,0 +1,37 @@
+// ===== cells > events =====
+
+// ...
+
+.events {
+  @extend %cell;
+
+  // ===== large, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: events,
+      size: large,
+      constraint: min
+    )
+  ) {
+    @include cell(
+      $name: events,
+      $size: large
+    );
+  }
+
+  // ===== x-large, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: events,
+      size: x-large,
+      constraint: min
+    )
+  ) {
+    @include cell(
+      $name: events,
+      $size: x-large
+    );
+  }
+}

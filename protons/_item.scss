@@ -1,0 +1,28 @@
+// ===== protons > item =====
+
+// ...
+
+.item {
+
+  .nav & {
+    display: block;
+    @include membrane(
+      $min: (
+        type: molecule,
+        name: nav,
+        size: full,
+        constraint: min
+      )
+    ) {
+      @include proton(
+        $name: item,
+        $parent: list,
+        $size: full
+      );
+      float: left;
+      &:nth-child(n+2){
+        text-align: center;
+      }
+    }
+  }
+}

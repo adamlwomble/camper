@@ -1,0 +1,96 @@
+// ===== protons > subtitle =====
+
+// ...
+
+.subtitle {
+
+  .books .book &,
+  .dates .date &,
+  .docs  .doc  &,
+  .posts .post &,
+  .relatives .relative & {
+    @extend %crosshead-medium;
+  }
+
+  .introduction & {
+    @extend %crosshead-heavy;
+  }
+
+  // ===== medium, below =====
+  @include membrane(
+    $max: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    .introduction & {
+      @include lead(
+        $dividend: 2
+      );
+    }
+
+    .relative .post & {
+      @include lead(
+        $dividend: 6
+      );
+    }
+
+    .book &,
+    .dates .date &,
+    .docs .doc &,
+    .posts .post & {
+      @include lead(
+        $dividend: 10
+      );
+    }
+
+    .post .introduction &,
+    .doc  .introduction & {
+      @include lead(
+        $dividend: 66
+      );
+    }
+  }
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    .introduction & {
+      @include lead(
+        $dividend: -2,
+        $divisor: small
+      )
+    }
+
+    .relative .post & {
+      @include lead(
+        $dividend: 6
+      );
+    }
+
+    .book &,
+    .dates .date &,
+    .docs .doc &,
+    .posts .post & {
+      @include lead(
+        $dividend: 8
+      );
+    }
+
+    .post .introduction &,
+    .doc  .introduction & {
+      @include lead(
+        $dividend: 62,
+        $divisor: small
+      );
+    }
+  }
+}

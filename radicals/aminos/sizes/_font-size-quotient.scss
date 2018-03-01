@@ -1,0 +1,6 @@
+@function font-size-quotient($dividend, $divisor: $font-base) {
+  @return to-unit(
+    ($dividend / $divisor),
+    em
+  );
+}

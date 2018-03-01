@@ -1,0 +1,7 @@
+// ===== radicals > aminos > weights > font-weight =====
+
+// ...
+
+@mixin font-weight($weight) {
+  font-weight: font-weight-get($weight);
+}

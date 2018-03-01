@@ -1,0 +1,13 @@
+// ===== protons > category =====
+
+// ...
+
+.category {
+  @extend %display-block;
+
+  .introduction & {
+    @include lead(
+      $dividend: 88
+    );
+  }
+}

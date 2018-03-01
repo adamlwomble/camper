@@ -1,0 +1,14 @@
+// ===== atoms > doc =====
+
+// ...
+
+.doc {
+
+  body > & {
+    @extend %cell;
+  }
+
+  .docs & {
+    @extend %article-listing;
+  }
+}

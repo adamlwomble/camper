@@ -1,0 +1,12 @@
+@mixin font-size($size, $divisor: null) {
+  @if $divisor {
+    font-size: font-size-quotient(
+      font-size-get($size),
+      font-size-get($divisor)
+    );
+  } @else {
+    font-size: font-size-quotient(
+      font-size-get($size)
+    );
+  }
+}

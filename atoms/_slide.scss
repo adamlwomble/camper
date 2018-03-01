@@ -1,0 +1,10 @@
+// ===== atoms > slide =====
+
+// ...
+
+.slide {
+  display: none;
+  &#active {
+    @extend %display-block;
+  }
+}

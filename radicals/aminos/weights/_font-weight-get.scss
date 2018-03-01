@@ -1,0 +1,8 @@
+@function font-weight-get($weight) {
+  @if map-has-key($font-weights, $weight) {
+    @return map-get($font-weights, $weight);
+  }
+  @else {
+    @warn function-warning($weight, "font-weight-get", $font-weights);
+  }
+}

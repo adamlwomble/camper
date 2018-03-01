@@ -1,0 +1,32 @@
+// ===== protons > textarea =====
+
+// ...
+
+.textarea {
+  @extend %font_base;
+  margin: 0;
+  width: 100%;
+  padding: font-size-quotient(16) font-size-quotient(24);
+
+  @include lead(
+    $dividend: 6
+  );
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    @include lead(
+      $dividend: 7
+    );
+  }
+
+  &::placeholder {
+    @extend %pigment-mid;
+  }
+}

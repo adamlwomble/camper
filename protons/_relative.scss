@@ -1,0 +1,40 @@
+// ===== protons > relative =====
+
+// ...
+
+.relative {
+
+  // ===== medium, below =====
+  @include membrane(
+    $max: (
+      type: cell,
+      name: about,
+      size: large,
+      constraint: min
+    )
+  ) {
+    @include lead(
+      $dividend: 40
+    );
+  }
+
+  // ===== large, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: about,
+      size: large,
+      constraint: min
+    )
+  ) {
+    @include proton(
+      $name: relative,
+      $parent: author,
+      $size: large
+    );
+    @include lead(
+      $dividend: 10
+    );
+    float: right;
+  }
+}

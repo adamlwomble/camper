@@ -1,0 +1,37 @@
+// ===== cells > documentation =====
+
+// ...
+
+.documentation {
+  @extend %cell;
+
+  // ===== large, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: documentation,
+      size: large,
+      constraint: min
+    )
+  ) {
+    @include cell(
+      $name: documentation,
+      $size: large
+    );
+  }
+
+  // ===== x-large, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: documentation,
+      size: x-large,
+      constraint: min
+    )
+  ) {
+    @include cell(
+      $name: documentation,
+      $size: x-large
+    );
+  }
+}

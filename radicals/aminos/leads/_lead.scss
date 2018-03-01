@@ -1,0 +1,25 @@
+// ===== radicals > aminos > leads > lead =====
+
+// ...
+
+@mixin lead($dividend, $divisor: $font-base, $side: top) {
+  @if type-of($dividend) == string {
+    $dividend: font-size-get($dividend);
+  }
+  @if type-of($divisor) == string {
+    $divisor: font-size-get($divisor);
+  }
+  @if $dividend == 0 {
+    @if $side == top {
+      margin-top: 0;
+    } @else if $side == bottom {
+      margin-bottom: 0;
+    }
+  } @else {
+    @if $side == top {
+      margin-top: font-size-quotient($dividend, $divisor);
+    } @else if $side == bottom {
+      margin-bottom: font-size-quotient($dividend, $divisor);
+    }
+  }
+}

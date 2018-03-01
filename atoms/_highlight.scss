@@ -1,0 +1,237 @@
+.highlight {
+  background-color: pigment-get(dark);
+
+  &er-rouge {
+    @extend figure;
+  }
+
+  .bp { // built-in, pseudo
+    color: ff7;
+  }
+
+  .c { // comment
+    @extend %pigment-mid;
+    &1{ // comment, single line
+      @extend %pigment-mid;
+    }
+    &m { // comment, multi-line
+      @extend %pigment-mid;
+    }
+    &p { // comment, preproc
+      @extend %pigment-mid;
+    }
+    &s { // comment, special
+      @extend %pigment-mid;
+    }
+  }
+
+  .err { // error
+    @extend %pigment-red;
+  }
+
+  .g {
+    &d { // generic, deleted
+      @extend %pigment-light;
+    }
+    &e { // generic, emphasis
+      @extend %pigment-light;
+    }
+    &h { // generic, heading
+      @extend %pigment-light;
+    }
+    &i { // generic, inserted
+      @extend %pigment-light;
+    }
+    &o { // generic, output
+      @extend %pigment-light;
+    }
+    &p { // generic, prompt
+      @extend %pigment-light;
+    }
+    &r { // generic, error
+      @extend %pigment-light;
+    }
+    &s { // generic, strong
+      @extend %pigment-light;
+    }
+    &t { // generic, traceback
+      @extend %pigment-light;
+    }
+    &u { // generic, subheading
+      @extend %pigment-light;
+    }
+  }
+
+  .hll {
+  }
+
+  .il { // literal, number, integer, long
+    @extend %pigment-orange;
+  }
+
+  .k { // keyword
+    @extend %font_weight-bold;
+    @extend %pigment-blue;
+    &c { // keyword, constant
+      @extend %font_weight-bold;
+      @extend %pigment-blue;
+    }
+    &d { // keyword, declaration
+      @extend %font_weight-bold;
+      @extend %pigment-blue;
+    }
+    &n { // keyword, namespace
+      @extend %font_weight-bold;
+      @extend %pigment-blue;
+    }
+    &p { // keyword, pseudo
+      @extend %font_weight-bold;
+      @extend %pigment-blue;
+    }
+    &r { // keyword, reserved
+      @extend %font_weight-bold;
+      @extend %pigment-blue;
+    }
+    &t { // keyword, type
+      @extend %font_weight-bold;
+      @extend %pigment-blue;
+    }
+  }
+
+  .m { // literal, number
+    @extend %font_weight-semi;
+    @extend %pigment-orange;
+    &f { // literal, number, float
+      @extend %font_weight-semi;
+      @extend %pigment-orange;
+    }
+    &h { // literal, number, hex
+      @extend %font_weight-semi;
+      @extend %pigment-orange;
+    }
+    &i { // literal, number, integer
+      @extend %font_weight-semi;
+      @extend %pigment-orange;
+    }
+    &o { // literal, number, oct
+      @extend %font_weight-semi;
+      @extend %pigment-orange;
+    }
+  }
+
+  .n {
+    &a { // name, attribute
+      @extend %pigment-light;
+    }
+    &b { // name, built-in
+      @extend %pigment-light;
+    }
+    &c { // name, class
+      @extend %pigment-light;
+    }
+    &d { // name, decorator
+      @extend %pigment-light;
+    }
+    &e { // name, exception
+      @extend %pigment-light;
+    }
+    &f { // name, function
+      @extend %pigment-light;
+    }
+    &i { // name, entity
+      @extend %pigment-light;
+    }
+    &l { // name, label
+      @extend %pigment-light;
+    }
+    &n { // name, namespace
+      @extend %pigment-light;
+    }
+    &o { // name, constant
+      @extend %pigment-light;
+    }
+    &t { // name, tag
+      @extend %pigment-light;
+    }
+    &v { // name, variable
+      @extend %pigment-light;
+    }
+  }
+
+  .o { // operator
+    @extend %pigment-pink;
+    &w { // operator, word
+      @extend %pigment-pink;
+    }
+  }
+
+  .p {
+    @extend %pigment-light;
+  }
+
+  .s { // literal, string
+    @extend %font_weight-semi;
+    @extend %pigment-green;
+    &1 { // literal, string, single
+      @extend %font_weight-semi;
+      @extend %pigment-green;
+    }
+    &2 { // literal, string, double
+      @extend %font_weight-semi;
+      @extend %pigment-green;
+    }
+    &b { // literal, string, backtick
+      @extend %font_weight-semi;
+      @extend %pigment-green;
+    }
+    &c { // literal, string, character
+      @extend %font_weight-semi;
+      @extend %pigment-green;
+    }
+    &d { // literal, string, doc
+      @extend %font_weight-semi;
+      @extend %pigment-green;
+    }
+    &e { // literal, string, escape
+      @extend %font_weight-semi;
+      @extend %pigment-green;
+    }
+    &h { // literal, string, heredoc
+      @extend %font_weight-semi;
+      @extend %pigment-green;
+    }
+    &i { // literal, string, interpolation
+      @extend %font_weight-semi;
+      @extend %pigment-green;
+    }
+    &r { // literal, string, regex
+      @extend %font_weight-semi;
+      @extend %pigment-green;
+    }
+    &s { // literal, string, symbol
+      @extend %font_weight-semi;
+      @extend %pigment-green;
+    }
+    &x { // literal, string, other
+      @extend %font_weight-semi;
+      @extend %pigment-green;
+    }
+  }
+
+  .v {
+    &c { // name, variable, class
+      @extend %pigment-orange;
+    }
+    &g { // name, variable, global
+      @extend %pigment-orange;
+    }
+    &i { // name, variable, instance
+      @extend %pigment-orange;
+    }
+  }
+
+  .w { // text, whitespace
+    @extend %pigment-mid;
+  }
+
+}

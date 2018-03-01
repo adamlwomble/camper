@@ -1,0 +1,3 @@
+@mixin pigment($pigment) {
+  color: pigment-get($pigment);
+}

@@ -1,0 +1,8 @@
+@function to-unit($number, $unit) {
+  @if $unit == px or $unit == em or $unit == pc {
+    @return unquote("#{$number * 1}#{$unit}");
+  }
+  @else {
+    @warn function-warning($unit, "to-unit", $units);
+  }
+}

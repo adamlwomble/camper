@@ -1,0 +1,30 @@
+// ===== radicals > isotopes > pigments =====
+
+// ...
+
+%pigment {
+  &-blue {
+    @include pigment(blue);
+  }
+  &-dark {
+    @include pigment(dark);
+  }
+  &-green {
+    @include pigment(green);
+  }
+  &-light {
+    @include pigment(light);
+  }
+  &-mid {
+    @include pigment(mid);
+  }
+  &-orange {
+    @include pigment(orange);
+  }
+  &-pink {
+    @include pigment(pink);
+  }
+  &-red {
+    @include pigment(red);
+  }
+}

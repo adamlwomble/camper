@@ -1,0 +1,9 @@
+// ===== electrons > pre =====
+
+// ...
+
+pre {
+  @extend %pigment-light;
+  margin: 0;
+  padding: font-size-quotient(16) font-size-quotient(24);
+}

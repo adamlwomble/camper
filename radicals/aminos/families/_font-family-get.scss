@@ -1,0 +1,8 @@
+@function font-family-get($font) {
+  @if map-has-key($font-families, $font) {
+    @return map-get($font-families, $font);
+  }
+  @else {
+    @warn function-warning($font, "font-family-get", $font-families);
+  }
+}

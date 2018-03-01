@@ -1,0 +1,18 @@
+// ===== radicals > ribosomes > setup =====
+
+// ...
+
+// establish measure base
+$measure-base: $font-base * 33.75;
+
+// establish gutter-base
+$gutter-base: $measure-base / 3;
+
+// establish width-offset
+$width-offset: $font-base / 16;
+
+// establish width-min
+$width-min: ($font-base - $width-offset) / $font-base;
+
+// establish width-max
+$width-max: ($font-base + $width-offset) / $font-base;

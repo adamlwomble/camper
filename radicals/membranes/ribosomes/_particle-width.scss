@@ -1,0 +1,10 @@
+// ===== radicals > membranes > ribosomes > particle-width =====
+
+// ...
+
+@function particle-width($child-type, $child-name, $parent-type, $parent-name, $size) {
+  @return percentage(
+    particle-get($child-type, $child-name, $size) /
+    particle-get($parent-type, $parent-name, $size)
+  );
+}

@@ -1,0 +1,19 @@
+// ===== radicals > membranes > ribosomes > particle-set =====
+
+// ...
+
+@function particle-set($particles...) {
+  $width: 0;
+
+  @each $particle in $particles {
+    $width: $width + particle-get(
+      map-get($particle, type),
+      map-get($particle, name),
+      map-get($particle, size),
+      map-get($particle, number),
+      map-get($particle, constraint)
+    );
+  }
+
+  @return (min: round($width * $width-min), idl: $width, max: round($width * $width-max));
+}

@@ -1,0 +1,75 @@
+// ===== protons > detail =====
+
+// ...
+
+.detail {
+  @extend %display-block;
+
+  & + & {
+    @include lead(
+      $dividend: 38
+    );
+  }
+
+  .legend + & {
+    @include lead(
+      $dividend: 74
+    );
+  }
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    .legend + & {
+      @include lead(
+        $dividend: 72
+      );
+    }
+  }
+
+  .details & {
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: contact,
+        size: large,
+        constraint: min
+      )
+    ) {
+      @include proton(
+        $name: detail,
+        $parent: details,
+        $size: large
+      );
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: contact,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include proton(
+        $name: detail,
+        $parent: details,
+        $size: x-large
+      );
+    }
+    float: left;
+    clear: left;
+    &:last-child {
+      float: right;
+      clear: none;
+    }
+  }
+}

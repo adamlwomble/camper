@@ -1,0 +1,12 @@
+// ===== cells > footer =====
+
+// ...
+
+.footer {
+  @extend %cell;
+  @include lead(64);
+  @include lead(
+    $dividend: 133,
+    $side: bottom
+  );
+}

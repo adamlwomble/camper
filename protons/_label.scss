@@ -1,0 +1,12 @@
+// ===== protons > label =====
+
+// ...
+
+.label {
+  .details &,
+  .persons & {
+    @extend %crosshead-medium;
+    @extend %display-block;
+
+  }
+}

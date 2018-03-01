@@ -1,0 +1,195 @@
+// ===== radicals > membranes > particles > molecules =====
+
+// ...
+
+$molecules: (
+  molecule-base: (
+    medium: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    ),
+    small: particle-set(
+      (
+        type: measure,
+        name: single
+      )
+    )
+  ),
+
+  authors: (
+    large: particle-set(
+      (
+        type: atom,
+        name: author,
+        size: large
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: atom,
+        name: author,
+        size: x-large,
+        number: 2
+      ),
+      (
+        type: gutter,
+        name: semi-related
+      )
+    )
+  ),
+
+  books: (
+    medium: particle-set(
+      (
+        type: atom,
+        name: book,
+        size: medium
+      )
+    ),
+    large: particle-set(
+      (
+        type: atom,
+        name: book,
+        size: large
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: atom,
+        name: book,
+        size: x-large
+      )
+    )
+  ),
+
+  dates: (
+    large: particle-set(
+      (
+        type: atom,
+        name: date,
+        size: large,
+        number: 2
+      ),
+      (
+        type: gutter,
+        name: semi-related
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: atom,
+        name: date,
+        size: x-large,
+        number: 3
+      ),
+      (
+        type: gutter,
+        name: semi-related,
+        number: 2
+      )
+    )
+  ),
+
+  docs: (
+    large: particle-set(
+      (
+        type: atom,
+        name: post,
+        size: large,
+        number: 2
+      ),
+      (
+        type: gutter,
+        name: semi-related
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: atom,
+        name: post,
+        size: x-large,
+        number: 3
+      ),
+      (
+        type: gutter,
+        name: semi-related,
+        number: 2
+      )
+    )
+  ),
+
+  form: (
+    large: particle-set(
+      (
+        type: atom,
+        name: persons,
+        size: large,
+      ),
+      (
+        type: atom,
+        name: reasons,
+        size: large
+      ),
+      (
+        type: gutter,
+        name: semi-related
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: atom,
+        name: persons,
+        size: x-large,
+      ),
+      (
+        type: atom,
+        name: reasons,
+        size: x-large
+      ),
+      (
+        type: gutter,
+        name: semi-related
+      )
+    )
+  ),
+
+  nav: (
+    full: particle-set(
+      (
+        type: atom,
+        name: list,
+        size: full
+      )
+    )
+  ),
+
+  posts: (
+    large: particle-set(
+      (
+        type: atom,
+        name: post,
+        size: large,
+        number: 2
+      ),
+      (
+        type: gutter,
+        name: semi-related
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: atom,
+        name: post,
+        size: x-large,
+        number: 3
+      ),
+      (
+        type: gutter,
+        name: semi-related,
+        number: 2
+      )
+    )
+  )
+);

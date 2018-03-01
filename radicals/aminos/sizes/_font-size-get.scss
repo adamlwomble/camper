@@ -1,0 +1,8 @@
+@function font-size-get($size) {
+  @if map-has-key($font-sizes, $size) {
+    @return map-get($font-sizes, $size);
+  }
+  @else {
+    @warn function-warning($size, "font-size-get", $font-sizes);
+  }
+}

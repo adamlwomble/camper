@@ -1,0 +1,203 @@
+// ===== molecules > introduction =====
+
+// ...
+
+.introduction {
+  // ===== medium, below =====
+  @include membrane(
+    $max: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    @include molecule(
+      $name: molecule-base,
+      $parent: cell-base,
+      $size: small
+    );
+    .about &,
+    .blog &,
+    .contact &,
+    .doc &,
+    .documentation &,
+    .events &,
+    .slideshow & {
+      @include lead(
+        $dividend: 76
+      );
+    }
+  }
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    .about &,
+    .blog &,
+    .contact &,
+    .doc &,
+    .documentation &,
+    .events &,
+    .post &,
+    .slideshow & {
+      @include atom(
+        $name: introduction,
+        $parent-type: cell,
+        $parent: cell-base,
+        $size: medium
+      );
+      float: left;
+    }
+
+    .post &,
+    .doc & {
+      @include lead(
+        $dividend: 238
+      );
+    }
+
+    .about &,
+    .blog &,
+    .contact &,
+    .documentation &,
+    .events & {
+      @include lead(
+        $dividend: 154
+      );
+    }
+  }
+
+  .about & {
+  // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: about,
+        size: large,
+        constraint: min
+      )
+    ) {
+      @include atom(
+        $name: introduction,
+        $parent-type: cell,
+        $parent: about,
+        $size: large
+      );
+    }
+
+    // ===== about, x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: about,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include atom(
+        $name: introduction,
+        $parent-type: cell,
+        $parent: about,
+        $size: x-large
+      );
+    }
+  }
+
+  .blog &,
+  .documentation &,
+  .events & {
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: blog,
+        size: large,
+        constraint: min
+      )
+    ) {
+      @include atom(
+        $name: introduction,
+        $parent-type: cell,
+        $parent: blog,
+        $size: large
+      );
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: blog,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include atom(
+        $name: introduction,
+        $parent-type: cell,
+        $parent: blog,
+        $size: x-large
+      );
+    }
+  }
+
+  .contact & {
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: contact,
+        size: large,
+        constraint: min
+      )
+    ) {
+      @include atom(
+        $name: introduction,
+        $parent-type: cell,
+        $parent: contact,
+        $size: large
+      );
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: contact,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include atom(
+        $name: introduction,
+        $parent-type: cell,
+        $parent: contact,
+        $size: x-large
+      );
+    }
+  }
+
+  .post &,
+  .doc & {
+    // ===== medium, below =====
+    @include membrane(
+      $max: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      @include lead(
+        $dividend: 110
+      );
+    }
+  }
+}

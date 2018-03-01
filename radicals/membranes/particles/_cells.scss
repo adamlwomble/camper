@@ -1,0 +1,217 @@
+// ===== radicals > membranes > particles > cells =====
+
+// ...
+
+$cells: (
+  cell-base: (
+    small: particle-set(
+      (
+        type: measure,
+        name: single
+      ),
+      (
+        type: gutter,
+        name: related
+      )
+    ),
+    medium: particle-set(
+      (
+        type: measure,
+        name: single
+      ),
+      (
+        type: measure,
+        name: multi
+      ),
+      (
+        type: gutter,
+        name: semi-related
+      )
+    ),
+    gutters: (
+      left: particle-get(
+        $type: gutter,
+        $name: related
+      ),
+      right: particle-get(
+        $type: gutter,
+        $name: semi-related
+      )
+    )
+  ),
+
+  about: (
+    large: particle-set(
+      (
+        type: atom,
+        name: introduction,
+        size: large
+      ),
+      (
+        type: molecule,
+        name: authors,
+        size: large
+      ),
+      (
+        type: gutter,
+        name: unrelated
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: atom,
+        name: introduction,
+        size: x-large
+      ),
+      (
+        type: molecule,
+        name: authors,
+        size: x-large
+      ),
+      (
+        type: gutter,
+        name: unrelated
+      )
+    )
+  ),
+
+  blog: (
+    large: particle-set(
+      (
+        type: atom,
+        name: introduction,
+        size: large
+      ),
+      (
+        type: molecule,
+        name: posts,
+        size: large
+      ),
+      (
+        type: gutter,
+        name: unrelated
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: atom,
+        name: introduction,
+        size: x-large
+      ),
+      (
+        type: molecule,
+        name: posts,
+        size: x-large
+      ),
+      (
+        type: gutter,
+        name: unrelated
+      )
+    )
+  ),
+
+  contact: (
+    large: particle-set(
+      (
+        type: atom,
+        name: introduction,
+        size: large
+      ),
+      (
+        type: molecule,
+        name: form,
+        size: large
+      ),
+      (
+        type: gutter,
+        name: semi-related
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: atom,
+        name: introduction,
+        size: x-large
+      ),
+      (
+        type: molecule,
+        name: form,
+        size: x-large
+      ),
+      (
+        type: gutter,
+        name: semi-related
+      )
+    )
+  ),
+
+  documentation: (
+    large: particle-set(
+      (
+        type: atom,
+        name: introduction,
+        size: large
+      ),
+      (
+        type: molecule,
+        name: docs,
+        size: large
+      ),
+      (
+        type: gutter,
+        name: unrelated
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: atom,
+        name: introduction,
+        size: x-large
+      ),
+      (
+        type: molecule,
+        name: docs,
+        size: x-large
+      ),
+      (
+        type: gutter,
+        name: unrelated,
+      )
+    )
+  ),
+
+  events: (
+    large: particle-set(
+      (
+        type: atom,
+        name: introduction,
+        size: large
+      ),
+      (
+        type: molecule,
+        name: dates,
+        size: large
+      ),
+      (
+        type: gutter,
+        name: unrelated
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: atom,
+        name: introduction,
+        size: x-large
+      ),
+      (
+        type: molecule,
+        name: dates,
+        size: x-large
+      ),
+      (
+        type: gutter,
+        name: unrelated
+      )
+    )
+  )
+);

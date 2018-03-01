@@ -1,0 +1,43 @@
+// ===== atoms > body =====
+
+// ...
+
+.body {
+  @extend %article;
+  max-width: 100%;
+  float: left;
+
+  // ===== medium, below =====
+  @include membrane(
+    $max: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    @include atom(
+      $name: atom-base,
+      $parent-type: cell,
+      $parent: cell-base,
+      $size: small
+    );
+  }
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    @include atom(
+      $name: introduction,
+      $parent-type: cell,
+      $parent: cell-base,
+      $size: medium
+    );
+  }
+}

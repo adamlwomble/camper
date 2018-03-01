@@ -1,0 +1,63 @@
+// ===== atoms > reasons =====
+
+// ...
+
+.reasons {
+  @extend %clearfix;
+
+  .form & {
+    @include lead(
+      $dividend: 68
+    );
+
+    // ===== medium, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      @include lead(
+        $dividend: 78
+      );
+    }
+
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: contact,
+        size: large,
+        constraint: min
+      )
+    ) {
+      @include atom(
+        $name: reasons,
+        $parent: form,
+        $size: large
+      );
+      @include lead(
+        $dividend: 0
+      );
+      float: right;
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: contact,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include atom(
+        $name: reasons,
+        $parent: form,
+        $size: x-large
+      );
+    }
+  }
+}

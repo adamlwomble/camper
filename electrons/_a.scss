@@ -1,0 +1,10 @@
+// ===== electrons > a =====
+
+// ...
+
+a {
+
+  .body & {
+    @extend %link;
+  }
+}

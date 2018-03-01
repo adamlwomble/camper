@@ -1,0 +1,202 @@
+// ===== radicals > isotopes > aminos =====
+
+// ...
+
+%font {
+
+  // font_base
+  &_base {
+    @extend %font_family-serif;
+    @extend %font_size-base;
+    @include font-line(small, x-small);
+  }
+
+  // font_family
+  &_family {
+    &-mono {
+      @include font-family(mono);
+    }
+    &-sans {
+      @include font-family(sans);
+    }
+    &-serif {
+      @include font-family(serif);
+    }
+  }
+
+  // font_size
+  &_size {
+    &-x-large {
+      @include font-size(x-large);
+    }
+    &-large {
+      @include font-size(large);
+    }
+    &-medium {
+      @include font-size(medium);
+    }
+    &-small {
+      @include font-size(small);
+    }
+    &-x-small {
+      @include font-size(x-small);
+    }
+    &-base {
+      font-size: to-unit($font-base, px);
+    }
+  }
+
+  // font_weight
+  &_weight {
+    &-bold {
+      @include font-weight(bold);
+    }
+    &-semi {
+      @include font-weight(semi);
+    }
+    &-regular {
+      @include font-weight(regular);
+    }
+  }
+
+  // font_variant
+  &_variant {
+    &-small-caps {
+      font-variant: small-caps;
+      letter-spacing: 0.125em;
+      text-transform: lowercase;
+    }
+  }
+}
+
+// links
+%link {
+  @extend %font_family-sans;
+  @extend %font_weight-bold;
+  @extend %pigment-dark;
+  text-decoration: none;
+  &:hover {
+    @extend %pigment-mid;
+    cursor: pointer;
+  }
+}
+
+// titles
+%title {
+  &-section,
+  &-page {
+    @include font-line(
+      $dividend: x-large,
+      $divisor: x-large
+    );
+    @include font-weight(bold);
+  }
+
+  // ===== medium, below =====
+  @include membrane(
+    $max: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    &-section {
+      @include font-size(medium);
+    }
+    &-page {
+      @include font-size(large);
+    }
+  }
+
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    &-section {
+      @include font-size(large);
+    }
+    &-page {
+      @include font-size(x-large);
+    }
+  }
+}
+
+%crosshead {
+  &-light,
+  &-medium {
+    @include font-size(x-small);
+    @include font-line(
+      $dividend: small,
+      $divisor: x-small
+    );
+  }
+  &-light {
+    @include font-weight(regular);
+  }
+  &-medium {
+    @include font-weight(semi);
+  }
+  &-heavy {
+    @include font-weight(bold);
+  }
+  &-main {
+    @include font-weight(semi);
+  }
+
+  // ===== medium, below =====
+  @include membrane(
+    $max: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    &-heavy {
+      @include font-size(x-small);
+      @include font-line(
+        $dividend: small,
+        $divisor: x-small
+      );
+    }
+    &-main {
+      @include font-size(small);
+      @include font-line(
+        $dividend: small,
+        $divisor: small,
+      );
+    }
+  }
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    &-heavy {
+      @include font-size(small);
+      @include font-line(
+        $dividend: medium,
+        $divisor: small
+      );
+    }
+    &-main {
+      @include font-size(medium);
+      @include font-line(
+        $dividend: medium,
+        $divisor: medium
+      );
+    }
+  }
+}

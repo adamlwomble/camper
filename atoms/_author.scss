@@ -1,0 +1,111 @@
+// ===== atoms > author =====
+
+// ...
+
+.author {
+  @extend %clearfix;
+
+  .authors & {
+    // ===== medium, below =====
+    @include membrane(
+      $max: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      &:nth-child(2) {
+        @include lead(
+          $dividend: 69
+        );
+      }
+      &:nth-child(n+3) {
+        @include lead(
+          $dividend: 53
+        );
+      }
+    }
+
+    // ===== medium, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      &:nth-child(2) {
+        @include lead(
+          $dividend: 56
+        );
+      }
+      &:nth-child(n+3) {
+        @include lead(
+          $dividend: 46
+        );
+      }
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: about,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include atom(
+        $name: author,
+        $parent: authors,
+        $size: x-large
+      );
+      &:nth-child(3) {
+        @include lead(
+          $dividend: 56
+        );
+      }
+      &:nth-child(even){
+        float: left;
+        clear: left;
+      }
+      &:nth-child(odd){
+        float: right;
+      }
+    }
+  }
+
+  .introduction & {
+    @extend %display-block;
+
+    // ===== medium, below =====
+    @include membrane(
+      $max: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      @include lead(
+        $dividend: 21
+      );
+    }
+
+    // ===== medium, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      @include lead(
+        $dividend: 14
+      );
+    }
+  }
+}

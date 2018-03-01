@@ -1,0 +1,127 @@
+// ===== protons > lettermark =====
+
+// ...
+
+.lettermark {
+  height: font-size-quotient(42.9);
+  vertical-align: middle;
+}
+
+// ===== keyframes =====
+@keyframes route {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes destination {
+  60% {
+    transform: scale(1.6);
+  }
+
+  80% {
+    transform: scale(0.8);
+  }
+
+  90% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+// ===== routes =====
+.route {
+  // fill
+  fill: none;
+
+  // stroke
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 50.91169;
+  stroke-dashoffset: 50.91169;
+
+  // animation
+  animation-name: route;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+// ===== journeys =====
+.journey {
+  &-top {
+    .destination {
+      &-1 {
+        transform-origin: 42px 30.6px;
+      }
+
+      &-2 {
+        transform-origin: 30px 18.6px;
+      }
+
+      &-3 {
+        transform-origin: 42px 6.6px;
+      }
+
+      &-4 {
+        transform-origin: 54px 18.6px;
+      }
+    }
+  }
+
+  &-bottom {
+    .destination {
+      &-1 {
+        transform-origin: 42px 18.6px;
+      }
+
+      &-2 {
+        transform-origin: 54px 30.6px;
+      }
+
+      &-3 {
+        transform-origin: 42px 42.6px;
+      }
+
+      &-4 {
+        transform-origin: 30px 30.6px;
+      }
+    }
+  }
+}
+
+// ===== destinations =====
+[class^='destination-'] {
+  // transform
+  transform: scale(0);
+  transform-origin: center center;
+
+  // animation
+  animation-name: destination;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.destination {
+  &_in {
+    fill: #fff;
+  }
+
+  &-2 {
+    animation-delay: 0.5s;
+  }
+
+  &-3 {
+    animation-delay: 1s;
+  }
+
+  &-4 {
+    animation-delay: 1.5s;
+  }
+}

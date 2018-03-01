@@ -1,0 +1,74 @@
+// ===== molecules > books =====
+
+// ...
+
+.books {
+
+  .about & {
+    // ===== medium, below =====
+    @include membrane(
+      $max: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      @include lead(
+        $dividend: 80
+      );
+    }
+
+    // ===== medium, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      @include molecule(
+        $name: books,
+        $parent: cell-base,
+        $size: medium
+      );
+      @include lead(70);
+      float: left;
+    }
+
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        (
+          type: cell,
+          name: about,
+          size: large,
+          constraint: min
+        )
+      )
+    ) {
+      @include molecule(
+        $name: books,
+        $parent: about,
+        $size: large
+      );
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: about,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include molecule(
+        $name: books,
+        $parent: about,
+        $size: x-large
+      );
+    }
+  }
+}

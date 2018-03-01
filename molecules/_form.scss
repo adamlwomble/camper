@@ -1,0 +1,69 @@
+// ===== molecules > forms =====
+
+// ...
+
+.form {
+  @extend %molecule;
+
+  .contact & {
+    // ===== medium, below =====
+    @include membrane(
+      $max: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      @include lead(
+        $dividend: 118
+      );
+    }
+
+    // ===== medium, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: cell-base,
+        size: medium,
+        constraint: min
+      )
+    ) {
+      @include lead(
+        $dividend: 230
+      );
+    }
+
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: contact,
+        size: large,
+        constraint: min
+      )
+    ) {
+      @include molecule(
+        $name: form,
+        $parent: contact,
+        $size: large
+      );
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: contact,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include molecule(
+        $name: form,
+        $parent: contact,
+        $size: x-large
+      );
+    }
+  }
+}

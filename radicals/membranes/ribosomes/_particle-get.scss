@@ -1,0 +1,45 @@
+// ===== radicals > membranes > ribosomes > particle-get =====
+
+// ...
+
+@function particle-get($type, $name, $size: null, $number: null, $constraint: null) {
+  $width: 0;
+  $map: ();
+
+  @if $type == gutter {
+    $map: $gutters;
+  } @else if $type == measure {
+    $map: $measures;
+  } @else if $type == proton {
+    $map: $protons;
+  } @else if $type == atom {
+    $map: $atoms;
+  } @else if $type == molecule {
+    $map: $molecules;
+  } @else if $type == cell {
+    $map: $cells;
+  }
+
+  @if $constraint == null {
+    $constraint: idl;
+  }
+
+  @if map-has-key($map, $name) {
+    @if $type == gutter or $type == measure {
+      $width: $width + map-get($map, $name);
+    } @else if $type == proton or $type == atom or $type == molecule or $type == cell {
+      @if $constraint {
+        $width: $width + map-get-deep($map, $name, $size, $constraint);
+      } @else {
+        $width: $width + map-get-deep($map, $name, $size);
+      }
+    }
+    @if $number {
+      $width: $width * $number;
+    }
+  } @else {
+    @warn function-warning($name, "particle-get(#{$type})", $map);
+  }
+
+  @return $width;
+}

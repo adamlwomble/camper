@@ -1,0 +1,41 @@
+// ===== molecules > references =====
+
+// ...
+
+.docs {
+  @extend %molecule;
+
+  .documentation & {
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: documentation,
+        size: large,
+        constraint: min
+      )
+    ) {
+      @include molecule(
+        $name: docs,
+        $parent: documentation,
+        $size: large
+      );
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: documentation,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include molecule(
+        $name: docs,
+        $parent: documentation,
+        $size: x-large
+      );
+    }
+  }
+}

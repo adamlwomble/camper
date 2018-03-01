@@ -1,0 +1,3 @@
+@function function-warning($argument, $function, $map) {
+  @return "I'm sorry, but '#{$argument}' is not a valid selection for the #{$function} function. Please choose from: #{map-keys($map)}.";
+}

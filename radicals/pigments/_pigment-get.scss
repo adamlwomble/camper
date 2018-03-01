@@ -1,0 +1,8 @@
+@function pigment-get($pigment) {
+  @if map-has-key($pigments, $pigment) {
+    @return map-get($pigments, $pigment);
+  }
+  @else {
+    @warn function-warning($pigment, "pigment-get", $pigments);
+  }
+}

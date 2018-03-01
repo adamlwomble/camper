@@ -1,0 +1,41 @@
+// ===== atoms > persons =====
+
+// ...
+
+.persons {
+
+  .form & {
+    // ===== large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: contact,
+        size: large,
+        constraint: min
+      )
+    ) {
+      @include atom(
+        $name: persons,
+        $parent: form,
+        $size: large
+      );
+      float: left;
+    }
+
+    // ===== x-large, above =====
+    @include membrane(
+      $min: (
+        type: cell,
+        name: contact,
+        size: x-large,
+        constraint: min
+      )
+    ) {
+      @include atom(
+        $name: persons,
+        $parent: form,
+        $size: x-large
+      );
+    }
+  }
+}

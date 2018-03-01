@@ -1,0 +1,88 @@
+// ===== protons > reason =====
+
+// ...
+
+.reason {
+  @extend %button;
+
+  & + & {
+    @include lead(
+      $dividend: 8
+    );
+  }
+
+  .legend + & {
+    @include lead(
+      $dividend: 33
+    );
+  }
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    & + & {
+      @include lead(
+        $dividend: 24
+      );
+    }
+    .legend + & {
+      @include lead(
+        $dividend: 47
+      );
+    }
+  }
+
+  // ===== large, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: contact,
+      size: large,
+      constraint: min
+    )
+  ) {
+    @include proton(
+      $name: reason,
+      $parent: reasons,
+      $size: large
+    );
+  }
+
+  // ===== x-large, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: contact,
+      size: x-large,
+      constraint: min
+    )
+  ) {
+    @include proton(
+      $name: reason,
+      $parent: reasons,
+      $size: x-large
+    );
+    &:nth-child(-n+5) {
+      @include lead(
+        $dividend: 47
+      );
+    }
+    float: left;
+    &:nth-child(-n+4) {
+      @include gutter(
+        $size: related,
+        $side: right,
+        $unit: pc,
+        $parent-type: atom,
+        $parent-name: reasons,
+        $parent-size: x-large
+      );
+    }
+  }
+}

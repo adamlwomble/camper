@@ -1,0 +1,118 @@
+// ===== radicals > membranes > particles > gutter =====
+
+// ...
+
+@mixin gutter($size, $side, $unit: px, $spacing: margin, $parent-type: null, $parent-name: null, $parent-size: null) {
+  @if $unit != px and $unit != pc {
+    @warn "Sorry, but '#{$unit}' is not a valid argument for the $unit paremeter of the gutter mixin. Please choose from: pc or px."
+  }
+  @if $side == both {
+    @if $unit == px {
+      @if $spacing == margin {
+        margin: 0 to-unit(
+          particle-get(
+            gutter,
+            $size
+          ), px
+        );
+      } @else if $spacing == padding {
+        padding: 0 to-unit(
+          particle-get(
+            gutter,
+            $size
+          ), px
+        );
+      }
+    } @else if $unit == pc {
+      @if $spacing == margin {
+        margin: 0 particle-width(
+          gutter,
+          $size,
+          $parent-type,
+          $parent-name,
+          $parent-size
+        );
+      } @else if $spacing == padding {
+        padding: 0 particle-width(
+          gutter,
+          $size,
+          $parent-type,
+          $parent-name,
+          $parent-size
+        );
+      }
+    }
+  } @else if $side == left {
+    @if $unit == px {
+      @if $spacing == margin {
+        margin-left: to-unit(
+          particle-get(
+            gutter,
+            $size
+          ), px
+        );
+      } @else if $spacing == padding {
+        padding-left: to-unit(
+          particle-get(
+            gutter,
+            $size
+          ), px
+        );
+      }
+    } @else if $unit == pc {
+      @if $spacing == margin {
+        margin-left: particle-width(
+          gutter,
+          $size,
+          $parent-type,
+          $parent-name,
+          $parent-size
+        );
+      } @else if $spacing == padding {
+        padding-left: particle-width(
+          gutter,
+          $size,
+          $parent-type,
+          $parent-name,
+          $parent-size
+        );
+      }
+    }
+  } @else if $side == right {
+    @if $unit == px {
+      @if $spacing == margin {
+        margin-right: to-unit(
+          particle-get(
+            gutter,
+            $size
+          ), px
+        );
+      } @else if $spacing == padding {
+        padding-right: to-unit(
+          particle-get(
+            gutter,
+            $size
+          ), px
+        );
+      }
+    } @else if $unit == pc {
+      @if $spacing == margin {
+        margin-right: particle-width(
+          gutter,
+          $size,
+          $parent-type,
+          $parent-name,
+          $parent-size
+        );
+      } @else if $spacing == padding {
+        padding-right: particle-width(
+          gutter,
+          $size,
+          $parent-type,
+          $parent-name,
+          $parent-size
+        );
+      }
+    }
+  }
+}

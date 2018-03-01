@@ -1,0 +1,219 @@
+// ===== radicals > membranes > particles > atoms =====
+
+// ...
+
+$atoms: (
+  atom-base: (
+    small: particle-set(
+      (
+        type: measure,
+        name: single
+      )
+    ),
+    medium: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    )
+  ),
+
+  author: (
+    large: particle-set(
+      (
+        type: proton,
+        name: biography,
+        size: large
+      ),
+      (
+        type: proton,
+        name: relative,
+        size: large
+      ),
+      (
+        type: gutter,
+        name: related
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: proton,
+        name: biography,
+        size: x-large
+      ),
+      (
+        type: proton,
+        name: relative,
+        size: x-large
+      ),
+      (
+        type: gutter,
+        name: related
+      )
+    )
+  ),
+
+  book: (
+    medium: particle-set(
+      (
+        type: measure,
+        name: single
+      )
+    ),
+    large: particle-set(
+      (
+        type: measure,
+        name: single
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: measure,
+        name: single
+      )
+    )
+  ),
+
+  date: (
+    large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    )
+  ),
+
+  details: (
+    large: particle-set(
+      (
+        type: proton,
+        name: detail,
+        size: large
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: proton,
+        name: detail,
+        size: x-large,
+        number: 2
+      ),
+      (
+        type: gutter,
+        name: semi-related
+      ),
+      (
+        type: gutter,
+        name: related
+      )
+    )
+  ),
+
+  doc: (
+    large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    )
+  ),
+
+  introduction: (
+    medium: particle-set(
+      (
+        type: measure,
+        name: single
+      )
+    ),
+    large: particle-set(
+      (
+        type: measure,
+        name: single
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: measure,
+        name: single
+      )
+    )
+  ),
+
+  list: (
+    full: particle-set(
+      (
+        type: proton,
+        name: item,
+        size: full,
+        number: 6
+      )
+    )
+  ),
+
+  persons: (
+    large: particle-set(
+      (
+        type: proton,
+        name: person,
+        size: large
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: proton,
+        name: person,
+        size: x-large
+      )
+    )
+  ),
+
+  post: (
+    large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    )
+  ),
+
+  reasons: (
+    large: particle-set(
+      (
+        type: proton,
+        name: reason,
+        size: large
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: proton,
+        name: reason,
+        size: x-large,
+        number: 4
+      ),
+      (
+        type: gutter,
+        name: related,
+        number: 3
+      )
+    )
+  )
+);

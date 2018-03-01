@@ -1,0 +1,35 @@
+// ===== radicals > fonts > families > setup =====
+
+// ...
+
+// families
+$import: (
+  mono: (
+    family:'Source+Code+Pro',
+    weights: (
+      400,
+      600,
+      700
+    )
+  ),
+  sans: (
+    family: 'Source+Sans+Pro',
+    weights: (
+      400,
+      600,
+      700
+    )
+  ),
+  serif: (
+    family: 'Source+Serif+Pro',
+    weights: (
+      400,
+      600,
+      700
+    )
+  )
+);
+
+// import font families
+
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,600,700|Source+Serif+Pro:400,600,700");

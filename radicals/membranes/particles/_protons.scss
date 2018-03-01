@@ -1,0 +1,104 @@
+// ===== radicals > membranes > particles > protons =====
+
+// ...
+
+$protons: (
+  proton-base: (
+    small: particle-set(
+      (
+        type: measure,
+        name: single
+      )
+    ),
+    medium: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    )
+  ),
+
+  biography: (
+    large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    )
+  ),
+
+  detail: (
+    large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    )
+  ),
+
+  item: (
+    full: particle-set(
+      (
+        type: measure,
+        name: aside
+      )
+    )
+  ),
+
+  person: (
+    large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    )
+  ),
+
+  reason: (
+    large: particle-set(
+      (
+        type: measure,
+        name: multi
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: measure,
+        name: aside
+      )
+    )
+  ),
+
+  relative: (
+    large: particle-set(
+      (
+        type: measure,
+        name: aside
+      )
+    ),
+    x-large: particle-set(
+      (
+        type: measure,
+        name: aside
+      )
+    )
+  )
+);

@@ -1,0 +1,13 @@
+// ===== radicals > aminos > lines > font-line =====
+
+// ...
+
+@mixin font-line($dividend, $divisor: $font-base) {
+  @if type-of($dividend) == string {
+    $dividend: font-size-get($dividend);
+  }
+  @if type-of($divisor) == string {
+    $divisor: font-size-get($divisor);
+  }
+  line-height: $dividend / $divisor;
+}

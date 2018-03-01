@@ -1,0 +1,10 @@
+// ===== atoms > date =====
+
+// ...
+
+.date {
+
+  .dates & {
+    @extend %article-listing;
+  }
+}

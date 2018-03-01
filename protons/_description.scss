@@ -1,0 +1,66 @@
+// ===== protons > description =====
+
+// ...
+
+.description {
+  // ===== medium, below =====
+  @include membrane(
+    $max: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    .biography &,
+    .book &,
+    .dates .date &,
+    .docs .doc &,
+    .introduction &,
+    .posts .post &,
+    .relative & {
+      @include lead(
+        $dividend: 8
+      );
+    }
+
+    .post .introduction & {
+      @include lead(
+        $dividend: 40
+      );
+    }
+  }
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    .biography &,
+    .book &,
+    .dates .date &,
+    .docs .doc &,
+    .posts .post &,
+    .relative & {
+      @include lead(
+        $dividend: 8
+      );
+    }
+
+    .introduction & {
+      @include lead(
+        $dividend: 22
+      );
+    }
+
+    .post .introduction & {
+      @include lead(
+        $dividend: 38
+      );
+    }
+  }
+}

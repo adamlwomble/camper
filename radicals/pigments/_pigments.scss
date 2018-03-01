@@ -1,0 +1,21 @@
+// ===== radicals > pigments > pigments =====
+
+// ...
+
+// pigments map
+$pigments: (
+    blue: #7bf,
+    dark: #000,
+   green: #7f7,
+   light: #fff,
+     mid: #777,
+  orange: #fb7,
+    pink: #f7f,
+     red: #f77
+);
+
+// import pigment-get function
+@import "pigment-get";
+
+// import pigment mixin
+@import "pigment";

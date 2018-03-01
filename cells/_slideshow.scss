@@ -1,0 +1,19 @@
+// ===== cells > slideshow =====
+
+// ...
+
+.slideshow {
+  @extend %article;
+  @extend %cell;
+
+  // ===== medium, above =====
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+  }
+}

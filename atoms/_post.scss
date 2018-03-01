@@ -1,0 +1,20 @@
+// ===== atoms > post =====
+
+// ...
+
+.post {
+
+  body > & {
+    @extend %cell;
+  }
+
+  .posts & {
+    @extend %article-listing;
+  }
+
+  .relative & {
+    @include lead(
+      $dividend: 24
+    );
+  }
+}

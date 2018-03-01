@@ -1,0 +1,13 @@
+// ===== radicals > membranes > molecule =====
+
+// ...
+
+@mixin molecule($name, $parent, $size, $parent-type: cell) {
+  width: particle-width(
+    molecule,
+    $name,
+    $parent-type,
+    $parent,
+    $size
+  );
+}

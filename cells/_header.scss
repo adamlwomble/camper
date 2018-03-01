@@ -1,0 +1,57 @@
+// ===== cells > header =====
+
+// ...
+
+body > .header,
+.header-active {
+  @extend %position-fixed;
+  @extend %box-shadow-small-negative;
+  @include font-line(80);
+  background: pigment-get(light);
+  top: 100%;
+  width: 100%;
+  padding: 0 floor(
+    percentage(
+      particle-get(
+        $type: gutter,
+        $name: related
+      ) / particle-get(
+        $type: cell,
+        $name: cell-base,
+        $size: small
+      )
+    ) / 2
+  );
+
+  @include membrane(
+    $min: (
+      type: cell,
+      name: cell-base,
+      size: medium,
+      constraint: min
+    )
+  ) {
+    @include gutter(
+      $size: related,
+      $side: left,
+      $spacing: padding
+    );
+    @include gutter(
+      $size: semi-related,
+      $side: right,
+      $spacing: padding
+    );
+  }
+}
+
+.header {
+  body > & {
+    height: font-size-quotient(80);
+    margin-top: -(font-size-quotient(80));
+  }
+
+  &-active {
+    height: font-size-quotient(480);
+    margin-top: -(font-size-quotient(480));
+  }
+}
